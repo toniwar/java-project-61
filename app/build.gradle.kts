@@ -1,6 +1,7 @@
 plugins {
     id("java")
     application
+    checkstyle
 }
 application{
     mainClass = "hexlet.code.App"
