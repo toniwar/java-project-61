@@ -1,4 +1,4 @@
-package hexlet.code.games;
+package hexlet.code.games.repository;
 
 public interface Game {
     String showGameRule();

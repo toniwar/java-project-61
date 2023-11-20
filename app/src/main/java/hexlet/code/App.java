@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.GameType;
+import hexlet.code.utils.GameType;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -12,6 +12,7 @@ public class App {
             {2, "Even"},
             {3, "Calc"},
             {4, "GCD"},
+            {5, "Progressions"},
             {0, "Exit"}
     };
     public static void main(String[] args) {
@@ -49,6 +50,11 @@ public class App {
                     player = Cli.greeting();
                 }
                 Engine.playTheGame(player, GameType.GCD);
+                break;
+            case 5 : if (player.isBlank()) {
+                    player = Cli.greeting();
+                }
+                Engine.playTheGame(player, GameType.PROGRESSIONS);
                 break;
             default: System.out.println("Incorrect input!");
         }

@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.games.repository.Game;
+
 import java.util.Random;
 
 public class Calc implements Game {

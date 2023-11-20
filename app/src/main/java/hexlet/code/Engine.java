@@ -3,9 +3,11 @@ package hexlet.code;
 import java.util.Scanner;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Calc;
-import hexlet.code.games.Game;
-import hexlet.code.games.GameType;
+import hexlet.code.games.repository.Game;
+import hexlet.code.utils.GameType;
 import hexlet.code.games.OddOrEven;
+import hexlet.code.games.Progression;
+
 
 public class Engine {
     private static final int DEFAULT_ROUNDS = 3;
@@ -20,6 +22,8 @@ public class Engine {
             case CALC: game = new Calc();
             break;
             case GCD: game = new GCD();
+            break;
+            case PROGRESSIONS: game = new Progression();
             break;
             default: return;
         }

@@ -1,7 +1,8 @@
-package hexlet.code.games;
+package hexlet.code.utils;
 
 public enum GameType {
     ODD_OR_EVEN,
     CALC,
-    GCD
+    GCD,
+    PROGRESSIONS
 }
