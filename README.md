@@ -12,3 +12,6 @@
 ### GCD:
 [![asciicast](https://asciinema.org/a/622092.svg)](https://asciinema.org/a/622092)
 
+### Progressions:
+[![asciicast](https://asciinema.org/a/622109.svg)](https://asciinema.org/a/622109)
+
