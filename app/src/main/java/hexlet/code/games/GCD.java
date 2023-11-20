@@ -11,10 +11,10 @@ public class GCD implements Game {
 
     @Override
     public String generateQuestion() {
-        var random = new Random();
         var x = generateEvenRandomNum(101);
         var y = generateEvenRandomNum(51);
-        for (var i = y; i >= 1; i--) {
+        var maxNum = Math.max(x, y);
+        for (var i = maxNum; i >= 1; i--) {
             if (x % i == 0 && y % i == 0) {
                 rightAnswer = "" + i;
                 break;

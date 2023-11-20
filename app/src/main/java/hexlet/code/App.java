@@ -7,6 +7,13 @@ import java.util.Scanner;
 
 public class App {
     private static String player = "";
+    private static final Object[][] ACTIONS = {
+            {1, "Greet"},
+            {2, "Even"},
+            {3, "Calc"},
+            {4, "GCD"},
+            {0, "Exit"}
+    };
     public static void main(String[] args) {
         showGameMenu();
     }
@@ -14,7 +21,9 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int answer = 0;
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet\n2 - Even\n3 - Calc\n0 - Exit");
+        for (var action : ACTIONS) {
+            System.out.println(action[0] + " - " + action[1]);
+        }
         try {
             answer = sc.nextInt();
         } catch (InputMismatchException e) {
@@ -35,6 +44,11 @@ public class App {
                     player = Cli.greeting();
                 }
                 Engine.playTheGame(player, GameType.CALC);
+                break;
+            case 4 : if (player.isBlank()) {
+                    player = Cli.greeting();
+                }
+                Engine.playTheGame(player, GameType.GCD);
                 break;
             default: System.out.println("Incorrect input!");
         }

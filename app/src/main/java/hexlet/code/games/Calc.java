@@ -12,8 +12,8 @@ public class Calc implements Game {
     @Override
     public String generateQuestion() {
         var random = new Random();
-        var x = random.nextInt(100);
-        var y = random.nextInt(100);
+        var x = random.nextInt(30);
+        var y = random.nextInt(30);
         var operation = random.nextInt(1, 4);
         return switch (operation) {
             case 1 -> addition(x, y);
@@ -23,7 +23,7 @@ public class Calc implements Game {
     }
 
     @Override
-    public boolean giveAnswer(String answer) {
+    public boolean checkAnswer(String answer) {
         return answer.equals(rightAnswer);
     }
 

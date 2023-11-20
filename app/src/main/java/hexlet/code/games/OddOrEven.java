@@ -17,7 +17,7 @@ public class OddOrEven implements Game {
     }
 
     @Override
-    public boolean giveAnswer(String answer) {
+    public boolean checkAnswer(String answer) {
         return answer.equalsIgnoreCase(rightAnswer);
     }
 

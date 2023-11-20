@@ -1,11 +1,11 @@
 package hexlet.code;
 
+import java.util.Scanner;
+import hexlet.code.games.GCD;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Game;
 import hexlet.code.games.GameType;
 import hexlet.code.games.OddOrEven;
-
-import java.util.Scanner;
 
 public class Engine {
     private static final int DEFAULT_ROUNDS = 3;
@@ -19,6 +19,8 @@ public class Engine {
             break;
             case CALC: game = new Calc();
             break;
+            case GCD: game = new GCD();
+            break;
             default: return;
         }
         System.out.println(game.showGameRule());
@@ -28,7 +30,7 @@ public class Engine {
             System.out.println("Question: " + game.generateQuestion());
             answer = scanner.nextLine();
             System.out.println("Your answer: " + answer);
-            if (!game.giveAnswer(answer)) {
+            if (!game.checkAnswer(answer)) {
                 System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s\n",
                         answer, game.getRightAnswer(), player);
                 return;
