@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.games.repository.Game;
+import hexlet.code.utils.Settings;
 
 import java.util.Random;
 
@@ -14,13 +15,14 @@ public class Calc implements Game {
     @Override
     public String generateQuestion() {
         var random = new Random();
-        var x = random.nextInt(30);
-        var y = random.nextInt(30);
-        var operation = random.nextInt(1, 4);
+        var x = random.nextInt(Settings.MAX_CALC_NUM);
+        var y = random.nextInt(Settings.MAX_CALC_NUM);
+        var operation = random.nextInt(Settings.OPERATIONS_COUNT);
         return switch (operation) {
-            case 1 -> addition(x, y);
-            case 2 -> subtraction(x, y);
-            default -> multiplication(x, y);
+            case Settings.ADDITION -> addition(x, y);
+            case Settings.SUBTRACTION -> subtraction(x, y);
+            case Settings.MULTIPLICATION -> multiplication(x, y);
+            default -> "";
         };
     }
 

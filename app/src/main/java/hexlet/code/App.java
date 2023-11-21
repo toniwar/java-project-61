@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.utils.GameType;
+import hexlet.code.utils.Settings;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -8,13 +9,13 @@ import java.util.Scanner;
 public class App {
     private static String player = "";
     private static final Object[][] ACTIONS = {
-            {1, "Greet"},
-            {2, "Even"},
-            {3, "Calc"},
-            {4, "GCD"},
-            {5, "Progressions"},
-            {6, "Prime"},
-            {0, "Exit"}
+            {Settings.GREET, "Greet"},
+            {Settings.EVEN, "Even"},
+            {Settings.CALC, "Calc"},
+            {Settings.GCD, "GCD"},
+            {Settings.PROGRESSIONS, "Progressions"},
+            {Settings.PRIME, "Prime"},
+            {Settings.EXIT, "Exit"}
     };
     public static void main(String[] args) {
         showGameMenu();
@@ -34,36 +35,35 @@ public class App {
         }
         System.out.println("Your choice: " + answer);
         switch (answer) {
-            case 0 : return;
-            case 1 : player = Cli.greeting();
-            break;
-            case 2 : if (player.isBlank()) {
-                    player = Cli.greeting();
-                }
+            case Settings.EXIT -> {
+            }
+            case Settings.GREET -> {
+                player = Cli.greeting();
+            }
+            case Settings.EVEN -> {
+                player = Cli.greeting();
                 Engine.playTheGame(player, GameType.ODD_OR_EVEN);
-            break;
-            case 3 : if (player.isBlank()) {
-                    player = Cli.greeting();
-                }
+            }
+            case Settings.CALC -> {
+                player = Cli.greeting();
                 Engine.playTheGame(player, GameType.CALC);
-                break;
-            case 4 : if (player.isBlank()) {
-                    player = Cli.greeting();
-                }
+            }
+            case Settings.GCD -> {
+                player = Cli.greeting();
                 Engine.playTheGame(player, GameType.GCD);
-                break;
-            case 5 : if (player.isBlank()) {
-                    player = Cli.greeting();
-                }
+            }
+            case Settings.PROGRESSIONS -> {
+                player = Cli.greeting();
                 Engine.playTheGame(player, GameType.PROGRESSIONS);
-                break;
-            case 6 : if (player.isBlank()) {
-                    player = Cli.greeting();
-                }
+            }
+            case Settings.PRIME -> {
+                player = Cli.greeting();
                 Engine.playTheGame(player, GameType.PRIME);
-                break;
-            default: System.out.println("Incorrect input!");
+            }
+            default -> {
+                System.out.println("Incorrect input! Try again");
+                showGameMenu();
+            }
         }
-        showGameMenu();
     }
 }

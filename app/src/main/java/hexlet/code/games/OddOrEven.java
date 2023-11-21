@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.games.repository.Game;
+import hexlet.code.utils.Settings;
 
 import java.util.Random;
 
@@ -13,7 +14,7 @@ public class OddOrEven implements Game {
 
     @Override
     public String generateQuestion() {
-        var number = new Random().nextInt(1, 101);
+        var number = new Random().nextInt(Settings.MAX_ODD_OR_EVEN_NUM);
         rightAnswer = number % 2 == 0 ? "yes" : "no";
         return "" + number;
     }

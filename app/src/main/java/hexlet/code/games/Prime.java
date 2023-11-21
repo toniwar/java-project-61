@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.games.repository.Game;
+import hexlet.code.utils.Settings;
 
 import java.util.Random;
 
@@ -14,7 +15,7 @@ public class Prime implements Game {
 
     @Override
     public String generateQuestion() {
-        var num = new Random().nextInt(301);
+        var num = new Random().nextInt(Settings.MAX_PRIME_NUM);
         rightAnswer = isPrime(num) ? "yes" : "no";
         return "" + num;
     }

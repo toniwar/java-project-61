@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.games.repository.Game;
+import hexlet.code.utils.Settings;
 
 import java.util.Random;
 
@@ -16,10 +17,10 @@ public class Progression implements Game {
     public String generateQuestion() {
         var question = new StringBuilder();
         var random = new Random();
-        var progressionLength = random.nextInt(5, 11);
+        var progressionLength = random.nextInt(Settings.MIN_PROGRESSION_LENGTH, Settings.MAX_PROGRESSION_LENGTH);
         var x = random.nextInt(2, progressionLength);
-        var increment = random.nextInt(2, 16);
-        var initialElement = random.nextInt(0, 21);
+        var increment = random.nextInt(Settings.MIN_PROGRESSION_INCREMENT, Settings.MAX_PROGRESSION_INCREMENT);
+        var initialElement = random.nextInt(Settings.MAX_INITIAL_PROGRESSION_ELEMENT);
         for (int i = initialElement, k = 0; k < progressionLength; i += increment, k++) {
             if (k != x) {
                 var element = i + " ";

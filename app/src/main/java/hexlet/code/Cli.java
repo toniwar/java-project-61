@@ -17,7 +17,7 @@ public class Cli {
         System.out.printf("Hello, %s!\n", name);
         return name;
     }
-    public static String fillInTheName() {
+    private static String fillInTheName() {
         var scanner = new Scanner(System.in);
         String name;
         try {
