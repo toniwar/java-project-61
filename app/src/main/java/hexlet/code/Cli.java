@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Cli {
     public static String greeting() {
-        System.out.println("Welcome to the Brain Games!\nMay I have You name?");
+        System.out.println("Welcome to the Brain Games!\nMay I have your name?");
         String name;
         while (true) {
             name = fillInTheName();
