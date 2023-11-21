@@ -5,7 +5,7 @@ import hexlet.code.utils.Settings;
 
 import java.util.Random;
 
-public class Prime implements Game {
+public final class Prime implements Game {
     private String rightAnswer;
 
     @Override

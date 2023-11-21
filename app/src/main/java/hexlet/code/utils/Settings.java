@@ -24,6 +24,11 @@ public class Settings {
     public static final int GCD_MAX_X = 101;
     public static final int GCD_MAX_Y = 51;
     public static final int GCD_MIN_NUM = 2;
+    /**
+     * Divisors for more successful generation of a pair
+     * of numbers with GCD.
+     * */
+    public static final int[] GCD_DIVISORS = new int[]{2, 3, 5};
 
     //Prime constants
     public static final int MAX_PRIME_NUM = 301;

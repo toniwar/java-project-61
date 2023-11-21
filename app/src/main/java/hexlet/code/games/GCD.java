@@ -5,7 +5,7 @@ import hexlet.code.utils.Settings;
 
 import java.util.Random;
 
-public class GCD implements Game {
+public final class GCD implements Game {
     private String rightAnswer;
     @Override
     public String showGameRule() {
@@ -40,7 +40,9 @@ public class GCD implements Game {
         var random = new Random();
         while (true) {
             var num = random.nextInt(Settings.GCD_MIN_NUM, limit);
-            if (num % 2 == 0 || num % 3 == 0 || num % 5 == 0) {
+            if (num % Settings.GCD_DIVISORS[0] == 0
+                    || num % Settings.GCD_DIVISORS[1] == 0
+                    || num % Settings.GCD_DIVISORS[2] == 0) {
                 return num;
             }
         }

@@ -5,7 +5,7 @@ import hexlet.code.utils.Settings;
 
 import java.util.Random;
 
-public class OddOrEven implements Game {
+public final class OddOrEven implements Game {
     private String rightAnswer;
     @Override
     public String showGameRule() {
