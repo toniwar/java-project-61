@@ -7,6 +7,7 @@ import hexlet.code.games.repository.Game;
 import hexlet.code.utils.GameType;
 import hexlet.code.games.OddOrEven;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 
 public class Engine {
@@ -24,6 +25,8 @@ public class Engine {
             case GCD: game = new GCD();
             break;
             case PROGRESSIONS: game = new Progression();
+            break;
+            case PRIME: game = new Prime();
             break;
             default: return;
         }

@@ -13,6 +13,7 @@ public class App {
             {3, "Calc"},
             {4, "GCD"},
             {5, "Progressions"},
+            {6, "Prime"},
             {0, "Exit"}
     };
     public static void main(String[] args) {
@@ -55,6 +56,11 @@ public class App {
                     player = Cli.greeting();
                 }
                 Engine.playTheGame(player, GameType.PROGRESSIONS);
+                break;
+            case 6 : if (player.isBlank()) {
+                    player = Cli.greeting();
+                }
+                Engine.playTheGame(player, GameType.PRIME);
                 break;
             default: System.out.println("Incorrect input!");
         }
