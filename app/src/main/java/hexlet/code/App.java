@@ -7,7 +7,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
-    private static String player = "";
     private static final Object[][] ACTIONS = {
             {Settings.GREET, "Greet"},
             {Settings.EVEN, "Even"},
@@ -34,11 +33,12 @@ public class App {
             showGameMenu();
         }
         System.out.println("Your choice: " + answer);
+        String player = "";
         switch (answer) {
             case Settings.EXIT -> {
             }
             case Settings.GREET -> {
-                player = Cli.greeting();
+                Cli.greeting();
             }
             case Settings.EVEN -> {
                 player = Cli.greeting();

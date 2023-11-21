@@ -38,7 +38,7 @@ public class Engine {
             answer = scanner.nextLine();
             System.out.println("Your answer: " + answer);
             if (!game.checkAnswer(answer)) {
-                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s\n",
+                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s!\n",
                         answer, game.getRightAnswer(), player);
                 return;
             }
