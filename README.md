@@ -15,3 +15,6 @@
 ### Progressions:
 [![asciicast](https://asciinema.org/a/622109.svg)](https://asciinema.org/a/622109)
 
+### Prime:
+[![asciicast](https://asciinema.org/a/622113.svg)](https://asciinema.org/a/622113)
+
