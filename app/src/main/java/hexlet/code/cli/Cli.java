@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Cli {
-    public static String greeting() {
+    public static void greeting() {
         System.out.println("Welcome to the Brain Games!\nMay I have your name?");
         String name;
         while (true) {
@@ -15,7 +15,6 @@ public class Cli {
             System.out.println("The name cannot be empty. Please, enter Your name.");
         }
         System.out.printf("Hello, %s!\n", name);
-        return name;
     }
     private static String fillInTheName() {
         var scanner = new Scanner(System.in);
