@@ -2,7 +2,6 @@ package hexlet.code.app;
 
 import hexlet.code.games.Game;
 import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class App {
@@ -20,11 +19,11 @@ public class App {
         if (scanner.hasNextInt()) {
             answer = scanner.nextInt();
             System.out.println("Your choice: " + answer);
-            if (!compareKeys(answer, MENU)) {
+            if (MENU.containsKey(answer)) {
+                Game.startGame(answer);
+            } else {
                 System.out.printf("An action with number '%d' is not in the list.\n", answer);
                 showGameMenu();
-            } else {
-                Game.startGame(answer);
             }
 
         } else {
@@ -32,14 +31,5 @@ public class App {
             showGameMenu();
         }
         scanner.close();
-    }
-
-    private static boolean compareKeys(int value, Map<Integer, String> map) {
-        for (var key : map.keySet()) {
-            if (value == key) {
-                return true;
-            }
-        }
-        return false;
     }
 }
