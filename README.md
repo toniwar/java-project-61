@@ -1,6 +1,11 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/toniwar/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/toniwar/java-project-61/actions)
 
+## Project description.
+### This is a simple console application based on a well-known game "The Brain Games".
+### The application consists of 3 layers: "app", "games", "engine".
+### Application architecture diagram: "app -> games -> engine".
+
 ## Asciinema
 
 ### Odd or even:
