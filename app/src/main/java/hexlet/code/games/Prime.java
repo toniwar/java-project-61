@@ -1,22 +1,25 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+import hexlet.code.Utils;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Random;
 
 public final class Prime {
-    private static final int MAX_NUM = 301;
+    private static final int MAX_NUM = 300;
     public static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static HashMap<String, String> getQuestions(int questionsNumber) {
+
+    public static void runGame(int questionsNumber) {
         var questions = new HashMap<String, String>();
         for (var i = 0; i < questionsNumber; i++) {
             var question = generateQuestion();
             questions.put(question.get(0), question.get(1));
         }
-        return questions;
+        Engine.launch(DESCRIPTION, questions);
     }
+
     private static List<String> generateQuestion() {
-        var num = new Random().nextInt(MAX_NUM);
+        var num = Utils.generateNumber(MAX_NUM);
         var rightAnswer = isPrime(num) ? "yes" : "no";
         var question = "" + num;
         return List.of(question, rightAnswer);

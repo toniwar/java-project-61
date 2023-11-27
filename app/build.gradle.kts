@@ -3,7 +3,7 @@ plugins {
     checkstyle
 }
 application{
-    mainClass = "hexlet.code.app.App"
+    mainClass = "hexlet.code.App"
 }
 
 group = "hexlet.code"

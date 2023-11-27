@@ -1,15 +1,14 @@
-package hexlet.code.cli;
+package hexlet.code;
 
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Cli {
-    public static void greeting() {
+    public static void greet() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!\nMay I have your name?");
         String player;
         while (true) {
-            player = fillInTheName(scanner);
+            player = scanner.nextLine();
             if (!player.isBlank()) {
                 System.out.printf("Hello, %s!\n", player);
                 break;
@@ -19,13 +18,4 @@ public class Cli {
         scanner.close();
     }
 
-    private static String fillInTheName(Scanner scanner) {
-        var name = "";
-        try {
-            name = scanner.nextLine();
-        } catch (NoSuchElementException e) {
-            name = "";
-        }
-        return name;
-    }
 }

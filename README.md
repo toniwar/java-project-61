@@ -2,9 +2,15 @@
 [![Actions Status](https://github.com/toniwar/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/toniwar/java-project-61/actions)
 
 ## Project description.
-### This is a simple console application based on a well-known game "The Brain Games".
-### The application consists of 3 layers: "app", "games", "engine".
-### Application architecture diagram: "app -> games -> engine".
+#### This is a simple console application based on a well-known game "The Brain Games".
+
+#### List of games:
+* "Even"
+* "Calc"
+* "GMC"
+* "Progressions"
+* "Prime"
+
 
 ## Asciinema
 
