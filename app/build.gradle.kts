@@ -1,10 +1,9 @@
 plugins {
-    id("java")
     application
     checkstyle
 }
 application{
-    mainClass = "hexlet.code.App"
+    mainClass = "hexlet.code.app.App"
 }
 
 group = "hexlet.code"
@@ -21,12 +20,6 @@ java {
 val run by tasks.getting(JavaExec::class) {
     standardInput = System.`in`
 }
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
-tasks.test {
-    useJUnitPlatform()
-}
+
 
 

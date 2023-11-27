@@ -1,53 +1,46 @@
 package hexlet.code.games;
 
-import hexlet.code.games.repository.Game;
-import hexlet.code.utils.Settings;
-
+import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
-public final class Calc implements Game {
-    private String rightAnswer;
-    @Override
-    public String showGameRule() {
-        return "What is the result of the expression?";
+public final class Calc {
+    private static final int MAX_NUM = 30;
+    private static final int ADDITION = 0;
+    private static final int SUBTRACTION = 1;
+    private static final int MULTIPLICATION = 2;
+    public static final int OPERATIONS_COUNT = 3;
+    public static final String DESCRIPTION = "What is the result of the expression?";
+    public static HashMap<String, String> getQuestions(int questionsNumber) {
+        var questions = new HashMap<String, String>();
+        for (var i = 0; i < questionsNumber; i++) {
+            var question = generateQuestion();
+            questions.put(question.get(0), question.get(1));
+        }
+        return questions;
     }
-
-    @Override
-    public String generateQuestion() {
+    private static List<String> generateQuestion() {
         var random = new Random();
-        var x = random.nextInt(Settings.MAX_CALC_NUM);
-        var y = random.nextInt(Settings.MAX_CALC_NUM);
-        var operation = random.nextInt(Settings.OPERATIONS_COUNT);
+        var x = random.nextInt(MAX_NUM);
+        var y = random.nextInt(MAX_NUM);
+        var operation = random.nextInt(OPERATIONS_COUNT);
         return switch (operation) {
-            case Settings.ADDITION -> addition(x, y);
-            case Settings.SUBTRACTION -> subtraction(x, y);
-            case Settings.MULTIPLICATION -> multiplication(x, y);
-            default -> "";
+            case ADDITION -> calcOperation(x, y, '+');
+            case SUBTRACTION -> calcOperation(x, y, '-');
+            case MULTIPLICATION -> calcOperation(x, y, '*');
+            default -> List.of(null, null);
         };
     }
+    private static List<String> calcOperation(int x, int y, char operation) {
+        var result  = switch (operation) {
+            case '+' -> x + y;
+            case '-' -> x - y;
+            case '*' -> x * y;
+            default -> throw new RuntimeException("Unknown operation: " + operation);
+        };
 
-    @Override
-    public boolean checkAnswer(String answer) {
-        return answer.equals(rightAnswer);
-    }
-
-    @Override
-    public String getRightAnswer() {
-        return rightAnswer;
-    }
-
-    private String addition(int x, int y) {
-        rightAnswer = "" + (x + y);
-        return String.format("%d + %d", x, y);
-    }
-
-    private String subtraction(int x, int y) {
-        rightAnswer = "" + (x - y);
-        return String.format("%d - %d", x, y);
-    }
-
-    private String multiplication(int x, int y) {
-        rightAnswer = "" + (x * y);
-        return String.format("%d * %d", x, y);
+        var rightAnswer = "" + result;
+        var question = String.format("%d %s %d", x, operation, y);
+        return List.of(question, rightAnswer);
     }
 }
