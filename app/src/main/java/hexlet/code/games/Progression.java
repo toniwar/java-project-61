@@ -22,7 +22,7 @@ public final class Progression {
     }
     private static List<String> generateQuestion() {
         var progressionLength = Utils.generateNumber(MIN_LENGTH, MAX_LENGTH);
-        var x = Utils.generateNumber(2, progressionLength);
+        var x = Utils.generateNumber(2, progressionLength - 1);
         var step = Utils.generateNumber(MIN_STEP, MAX_STEP);
         var firstElement = Utils.generateNumber(MAX_FIRST_ELEMENT);
         var progression = makeProgression(firstElement, step, progressionLength);
