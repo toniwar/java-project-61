@@ -8,33 +8,28 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
-    private static final int QUESTIONS_NUMBER = 3;
-    private static final String[] MENU = {
-        "1 - Greet",
-        "2 - Even",
-        "3 - Calc",
-        "4 - GCD",
-        "5 - Progressions",
-        "6 - Prime",
-        "0 - Exit"
-    };
-
     public static void main(String[] args) {
-        for (var item: MENU) {
-            System.out.println(item);
-        }
+        System.out.println("Please enter the game number and press Enter.");
+        System.out.println("1 - Greet");
+        System.out.println("2 - Even");
+        System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
+        System.out.println("0 - Exit");
         Scanner scanner = new Scanner(System.in);
         var selectedItem = scanner.next();
-        System.out.println("Your choice: " + selectedItem);
+        System.out.print("Your choice: " + selectedItem);
         switch (selectedItem) {
             case "1" -> Cli.greet();
-            case "2" -> Even.runGame(QUESTIONS_NUMBER);
-            case "3" -> Calc.runGame(QUESTIONS_NUMBER);
-            case "4" -> GCD.runGame(QUESTIONS_NUMBER);
-            case "5" -> Progression.runGame(QUESTIONS_NUMBER);
-            case "6" -> Prime.runGame(QUESTIONS_NUMBER);
+            case "2" -> Even.runGame();
+            case "3" -> Calc.runGame();
+            case "4" -> GCD.runGame();
+            case "5" -> Progression.runGame();
+            case "6" -> Prime.runGame();
             case "0" -> System.out.println("Goodbye!");
             default -> System.out.println("Invalid number entered!");
         }
     }
+
 }

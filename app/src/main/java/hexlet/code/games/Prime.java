@@ -6,12 +6,13 @@ import java.util.HashMap;
 import java.util.List;
 
 public final class Prime {
+    private static final int ROUNDS = 3;
     private static final int MAX_NUM = 300;
     public static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public static void runGame(int questionsNumber) {
+    public static void runGame() {
         var questions = new HashMap<String, String>();
-        for (var i = 0; i < questionsNumber; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             var question = generateQuestion();
             questions.put(question.get(0), question.get(1));
         }

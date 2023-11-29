@@ -6,15 +6,16 @@ import java.util.HashMap;
 import java.util.List;
 
 public final class Progression {
+    private static final int ROUNDS = 3;
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 10;
     private static final int MIN_STEP = 2;
     private static final int MAX_STEP = 15;
     private static final int MAX_FIRST_ELEMENT = 42;
     public static final String DESCRIPTION = "What number is missing in the progression?";
-    public static void runGame(int questionsNumber) {
+    public static void runGame() {
         var questions = new HashMap<String, String>();
-        for (var i = 0; i < questionsNumber; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             var question = generateQuestion();
             questions.put(question.get(0), question.get(1));
         }
