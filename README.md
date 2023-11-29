@@ -7,7 +7,7 @@
 #### List of games:
 * ["Even"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/Even.java)
 * ["Calc"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/Calc.java)
-* ["GMC"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/GMC.java)
+* ["GCD"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/GCD.java)
 * ["Progressions"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/Progression.java)
 * ["Prime"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/Prime.java)
 
