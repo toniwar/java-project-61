@@ -19,7 +19,7 @@ public class App {
         System.out.println("0 - Exit");
         Scanner scanner = new Scanner(System.in);
         var selectedItem = scanner.next();
-        System.out.print("Your choice: " + selectedItem);
+        System.out.println("Your choice: " + selectedItem);
         switch (selectedItem) {
             case "1" -> Cli.greet();
             case "2" -> Even.runGame();
