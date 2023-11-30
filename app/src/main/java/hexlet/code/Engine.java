@@ -4,6 +4,9 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Engine {
+
+    public static final int NUMBER_OF_ROUNDS = 3;
+
     public static void launch(String description, Map<String, String> questions) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!\nMay I have your name?");

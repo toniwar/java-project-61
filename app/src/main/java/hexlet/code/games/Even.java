@@ -7,13 +7,13 @@ import java.util.HashMap;
 import java.util.List;
 
 public final class Even {
-    private static final int ROUNDS = 3;
+
     private static final int MAX_NUM = 100;
     public static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void runGame() {
         var questions = new HashMap<String, String>();
-        for (var i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             var question = generateQuestion();
             questions.put(question.get(0), question.get(1));
         }

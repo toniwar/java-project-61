@@ -8,7 +8,7 @@
 * ["Even"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/Even.java)
 * ["Calc"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/Calc.java)
 * ["GCD"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/GCD.java)
-* ["Progressions"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/Progression.java)
+* ["Progressions"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/Progressions.java)
 * ["Prime"](https://github.com/toniwar/java-project-61/blob/main/app/src/main/java/hexlet/code/games/Prime.java)
 
 
